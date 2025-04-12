@@ -56,15 +56,11 @@ body
       left: 0
 
 // JustPureH2O
-backgroundWrapper(path)
-  background url(path)
-
 body:before
   position: fixed
   content: ''
-  >
-    if hexo-config('custom_css.background.image')
-      backgroundWrapper(hexo-config('custom-css.background.image'))
+  if hexo-config('custom_css.background.image')
+      background： url(convert(hexo-config('custom-css.background.image')))
   top: 0
   right: 0
   left: 0
