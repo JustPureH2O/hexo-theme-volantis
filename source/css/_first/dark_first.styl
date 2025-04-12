@@ -25,7 +25,18 @@ fitst_dark()
   --color-meta: $color-dark-meta
   --color-link: $color-dark-link
   --color-copyright-bkg: $color-dark-copyright-bkg
-
+  
+  if (hexo-config('custom_css.background.dark')
+    body:before
+      content: ''
+      position: fixed
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      background: url(convert(hexo-config('custom_css.background.image')))
+      opacity: 0.25
+    
   img
     filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
   //header
