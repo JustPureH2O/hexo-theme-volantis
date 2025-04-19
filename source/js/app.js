@@ -435,7 +435,7 @@ const VolantisApp = (() => {
   // 工具类：复制字符串到剪切板
   fn.utilWriteClipText = (str) => {
     return navigator.clipboard
-      .writeText(str)
+      .writeText(str + '\u200d\u200b\u200d\u200b\u200d\u200d\u200d\u200b\u200c\u200b\u200c\u200c\u200d\n' + `Original Works by JustPureH2O. Cite ${window.location.href} in your publication please. Licenced under CC-BY-NC-SA 4.0.\t本文为 JustPureH2O 原创文章，转载请注明出处：${window.location.href}，遵循 CC-BY-NC-SA 4.0 协议\n` + '\u200d\u200b\u200d\u200b\u200d\u200d\u200d\u200b\u200c\u200b\u200c\u200c\u200d')
       .then(() => {
         return Promise.resolve()
       })
